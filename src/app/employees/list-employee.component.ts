@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
-import { getMaxListeners } from 'cluster';
 
 @Component({
   selector: 'app-list-employee',
@@ -13,7 +12,7 @@ export class ListEmployeeComponent implements OnInit {
       id: 1,
       name: 'Ayushi Gupta',
       gender: 'Female',
-      email: 'aayushigupta@getMaxListeners.com',
+      email: 'aayushigupta@gmail.com',
       phoneNumber: 9458706434,
       contactPreference: 'email',
       dateOfBirth: new Date('08/23/2019'),
@@ -25,7 +24,7 @@ export class ListEmployeeComponent implements OnInit {
       id: 2,
       name: 'Garima Gupta',
       gender: 'Female',
-      email: 'garimaaayushigupta@getMaxListeners.com',
+      email: 'garimaaayushigupta@gmail.com',
       phoneNumber: 9458734334,
       contactPreference: 'email',
       dateOfBirth: new Date('03/27/2019'),
@@ -37,7 +36,7 @@ export class ListEmployeeComponent implements OnInit {
       id: 2,
       name: 'Akancha Gupta',
       gender: 'Female',
-      email: 'akanshagupta@getMaxListeners.com',
+      email: 'akanshagupta@gmail.com',
       phoneNumber: 9287382793,
       contactPreference: 'email',
       dateOfBirth: new Date('06/21/2019'),
