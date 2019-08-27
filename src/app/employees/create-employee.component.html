@@ -50,11 +50,22 @@
           </label>
         </div>
       </div>
+      <div class="form-group">
+        <label for="department">
+          Department
+        </label>
+        <select id="department" name="department" [(ngModel)]="department" class="form-control">
+          <option *ngFor= "let dept of departments" [value]="dept.id">{{dept.name}}</option>
+          <!-- <option value="2">Help Desk</option>
+          <option value="3">HR</option>
+          <option value="4">Management</option> -->
+        </select>
+      </div>
       <div class="panel-footer">
         <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </div>
-    </div>
+  </div>
 </form>
 
 {{myForm.value | json}}
