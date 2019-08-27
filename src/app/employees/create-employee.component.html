@@ -1,3 +1,60 @@
-<p>
-  create-employee works!
-</p>
+<form #myForm="ngForm" (ngSubmit)="save(myForm)">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Employee Create</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input id="fullname" [(ngModel)]="fullname" name="fullname" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" [(ngModel)]="email" name="email" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <div class="form-control">
+          <label class="radio-inline">
+            <input type="radio" value="male" name="gender" [(ngModel)]="gender">
+            Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="female" name="gender" [(ngModel)]="gender">
+            Female
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactPreference">Contact Preferences</label>
+        <div class="form-control">
+          <label class="radio-inline">
+            <input type="radio" value="emailId" name="emailId" [(ngModel)]="contactPreference">
+            Email
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="phone" name="phone" [(ngModel)]="contactPreference">
+            Phone
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-control">
+          <label class="checkbox-inline">
+            <input type="checkbox" name="isactive" [(ngModel)]="isactive">
+            IsActive
+          </label>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+    </div>
+</form>
+
+{{myForm.value | json}}
